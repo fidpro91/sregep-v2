@@ -1,7 +1,10 @@
 const Welcome = () => import('./components/Welcome.vue' /* webpackChunkName: "resource/js/components/welcome" */)
-const CategoryList = () => import('./components/category/List.vue' /* webpackChunkName: "resource/js/components/category/list" */)
-const CategoryCreate = () => import('./components/category/Add.vue' /* webpackChunkName: "resource/js/components/category/add" */)
-const CategoryEdit = () => import('./components/category/Edit.vue' /* webpackChunkName: "resource/js/components/category/edit" */)
+const RegistrasiHome = () => import('./components/register/registrasi.vue' /* webpackChunkName: "resource/js/components/welcome" */)
+const Patient = () => import('./components/register/data_patient.vue' /* webpackChunkName: "resource/js/components/welcome" */)
+const Poli = () => import('./components/register/data_poli.vue' /* webpackChunkName: "resource/js/components/welcome" */)
+const jadwalDokter = () => import('./components/register/data_dokter.vue')
+const caraBayar = () => import('./components/register/data_cara_bayar.vue')
+const finishRegistrasi = () => import('./components/register/finish_registrasi.vue')
 
 export const routes = [
     {
@@ -10,18 +13,35 @@ export const routes = [
         component: Welcome
     },
     {
-        name: 'categoryList',
-        path: '/category',
-        component: CategoryList
+        name: 'registrasiMandiri',
+        path: '/registrasi-mandiri',
+        component: RegistrasiHome
     },
     {
-        name: 'categoryEdit',
-        path: '/category/:id/edit',
-        component: CategoryEdit
+        name: 'dataPatient',
+        path: '/data-patient',
+        component: Patient
     },
     {
-        name: 'categoryAdd',
-        path: '/category/add',
-        component: CategoryCreate
+        name: 'dataPoli',
+        path: '/data-poli',
+        component: Poli,
+        props : true
+    },
+    {
+        name: 'jadwalDokter',
+        path: '/jadwal-dokter',
+        component: jadwalDokter,
+        props : true
+    },
+    {
+        name: 'caraBayar',
+        path: '/cara-bayar',
+        component: caraBayar
+    },
+    {
+        name: 'finishRegistrasi',
+        path: '/finish-registrasi',
+        component: finishRegistrasi
     }
 ]

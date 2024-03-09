@@ -1864,6 +1864,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -1878,12 +1904,13 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.es5.js");
 /* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
+/* harmony import */ var _utility__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utility */ "./resources/js/utility.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
@@ -1893,9 +1920,11 @@ window.Vue = vue__WEBPACK_IMPORTED_MODULE_0__.default;
 
 
 
-Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_5__.default);
+
+Vue.prototype.$setDataRegister = _utility__WEBPACK_IMPORTED_MODULE_5__.setDataRegister;
+Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_6__.default);
 Vue.use((vue_axios__WEBPACK_IMPORTED_MODULE_2___default()), (axios__WEBPACK_IMPORTED_MODULE_3___default()));
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_5__.default({
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__.default({
   mode: 'history',
   routes: _routes__WEBPACK_IMPORTED_MODULE_4__.routes
 });
@@ -1955,16 +1984,28 @@ var Welcome = function Welcome() {
   return __webpack_require__.e(/*! import() | resource/js/components/welcome */ "resource/js/components/welcome").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Welcome.vue */ "./resources/js/components/Welcome.vue"));
 };
 
-var CategoryList = function CategoryList() {
-  return __webpack_require__.e(/*! import() | resource/js/components/category/list */ "resource/js/components/category/list").then(__webpack_require__.bind(__webpack_require__, /*! ./components/category/List.vue */ "./resources/js/components/category/List.vue"));
+var RegistrasiHome = function RegistrasiHome() {
+  return __webpack_require__.e(/*! import() | resource/js/components/welcome */ "resource/js/components/welcome").then(__webpack_require__.bind(__webpack_require__, /*! ./components/register/registrasi.vue */ "./resources/js/components/register/registrasi.vue"));
 };
 
-var CategoryCreate = function CategoryCreate() {
-  return __webpack_require__.e(/*! import() | resource/js/components/category/add */ "resource/js/components/category/add").then(__webpack_require__.bind(__webpack_require__, /*! ./components/category/Add.vue */ "./resources/js/components/category/Add.vue"));
+var Patient = function Patient() {
+  return __webpack_require__.e(/*! import() | resource/js/components/welcome */ "resource/js/components/welcome").then(__webpack_require__.bind(__webpack_require__, /*! ./components/register/data_patient.vue */ "./resources/js/components/register/data_patient.vue"));
 };
 
-var CategoryEdit = function CategoryEdit() {
-  return __webpack_require__.e(/*! import() | resource/js/components/category/edit */ "resource/js/components/category/edit").then(__webpack_require__.bind(__webpack_require__, /*! ./components/category/Edit.vue */ "./resources/js/components/category/Edit.vue"));
+var Poli = function Poli() {
+  return __webpack_require__.e(/*! import() | resource/js/components/welcome */ "resource/js/components/welcome").then(__webpack_require__.bind(__webpack_require__, /*! ./components/register/data_poli.vue */ "./resources/js/components/register/data_poli.vue"));
+};
+
+var jadwalDokter = function jadwalDokter() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_register_data_dokter_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/register/data_dokter.vue */ "./resources/js/components/register/data_dokter.vue"));
+};
+
+var caraBayar = function caraBayar() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_register_data_cara_bayar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/register/data_cara_bayar.vue */ "./resources/js/components/register/data_cara_bayar.vue"));
+};
+
+var finishRegistrasi = function finishRegistrasi() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_register_finish_registrasi_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/register/finish_registrasi.vue */ "./resources/js/components/register/finish_registrasi.vue"));
 };
 
 var routes = [{
@@ -1972,18 +2013,65 @@ var routes = [{
   path: '/',
   component: Welcome
 }, {
-  name: 'categoryList',
-  path: '/category',
-  component: CategoryList
+  name: 'registrasiMandiri',
+  path: '/registrasi-mandiri',
+  component: RegistrasiHome
 }, {
-  name: 'categoryEdit',
-  path: '/category/:id/edit',
-  component: CategoryEdit
+  name: 'dataPatient',
+  path: '/data-patient',
+  component: Patient
 }, {
-  name: 'categoryAdd',
-  path: '/category/add',
-  component: CategoryCreate
+  name: 'dataPoli',
+  path: '/data-poli',
+  component: Poli,
+  props: true
+}, {
+  name: 'jadwalDokter',
+  path: '/jadwal-dokter',
+  component: jadwalDokter,
+  props: true
+}, {
+  name: 'caraBayar',
+  path: '/cara-bayar',
+  component: caraBayar
+}, {
+  name: 'finishRegistrasi',
+  path: '/finish-registrasi',
+  component: finishRegistrasi
 }];
+
+/***/ }),
+
+/***/ "./resources/js/utility.js":
+/*!*********************************!*\
+  !*** ./resources/js/utility.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setDataRegister": () => /* binding */ setDataRegister
+/* harmony export */ });
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function setDataRegister(params) {
+  var dataRegister = JSON.parse(localStorage.getItem('dataRegister'));
+  console.log('data asal:', dataRegister);
+
+  if (!dataRegister) {
+    localStorage.setItem('dataRegister', JSON.stringify(params));
+  } else {
+    var mergedData = _objectSpread(_objectSpread({}, dataRegister), params);
+
+    console.log('Merged Data:', mergedData);
+    localStorage.setItem('dataRegister', JSON.stringify(mergedData));
+  }
+}
 
 /***/ }),
 
@@ -19462,52 +19550,69 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("main", [
-    _c("nav", { staticClass: "navbar navbar-expand-lg navbar-dark bg-dark" }, [
-      _c(
-        "div",
-        { staticClass: "container-fluid" },
-        [
-          _c(
-            "router-link",
-            { staticClass: "navbar-brand", attrs: { to: "/", href: "#" } },
-            [_vm._v("Laravel Vue Crud App - TechvBlogs")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "collapse navbar-collapse" }, [
-            _c(
-              "div",
-              { staticClass: "navbar-nav" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "nav-item nav-link",
-                    attrs: { "exact-active-class": "active", to: "/" }
-                  },
-                  [_vm._v("Home")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "nav-item nav-link",
-                    attrs: { "exact-active-class": "active", to: "/category" }
-                  },
-                  [_vm._v("Category")]
-                )
-              ],
-              1
-            )
-          ])
-        ],
-        1
-      )
-    ]),
+    _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1)
+    _c(
+      "div",
+      {
+        staticClass: "wrapper",
+        staticStyle: { "padding-top": "100px !important" }
+      },
+      [_c("router-view")],
+      1
+    )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("header", { attrs: { id: "topnav" } }, [
+      _c("div", { staticClass: "navbar-custom" }, [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("div", { staticClass: "logo-box" }, [
+                _c(
+                  "a",
+                  { staticClass: "logo text-center", attrs: { href: "#" } },
+                  [
+                    _c("span", { staticClass: "logo-lg" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/images/logo.png",
+                          alt: "",
+                          height: "50"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "logo-sm" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/images/logo-sm.png",
+                          alt: "",
+                          height: "24"
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9 text-right" }, [
+              _c("h2", { staticClass: "title-app mt-3" }, [
+                _vm._v("APLIKASI ANJUNGAN PENDAFTARAN MANDIRI")
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -34780,7 +34885,7 @@ Vue.compile = compileToFunctions;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resource/js/components/welcome":1,"resource/js/components/category/list":1,"resource/js/components/category/add":1,"resource/js/components/category/edit":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resource/js/components/welcome":1,"resources_js_components_register_data_dokter_vue":1,"resources_js_components_register_data_cara_bayar_vue":1,"resources_js_components_register_finish_registrasi_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

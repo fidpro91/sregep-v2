@@ -18,4 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('category',App\Http\Controllers\CategoryController::class)->only(['index','store','show','update','destroy']);
+Route::post('view_registrasi','PatientController@view_register');
+Route::get('get_data_bayar','PatientController@get_data_bayar');
+Route::get('get_jadwal_dokter','PatientController@get_jadwal_dokter');
+Route::post('data_poli','PatientController@get_poli');
+Route::get('patient/get_patient/{id}', [App\Http\Controllers\PatientController::class, 'get_patient']);
