@@ -62,6 +62,27 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "caraBayar",
   data: function data() {
@@ -103,6 +124,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
+    },
+    openModal: function openModal() {
+      $(this.$refs.myModal).modal('show');
     },
     get_data_poli: function get_data_poli(id) {
       this.$setDataRegister({
@@ -964,7 +988,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c("div", [
+      _c("div", { ref: "myModal", staticClass: "modal fade" }, [_vm._m(0)])
+    ]),
+    _vm._v(" "),
+    _vm._m(1),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-9" }, [
@@ -1017,7 +1045,23 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(1)
+      _c("div", { staticClass: "col-md-3" }, [
+        _c("div", { staticClass: "text-center" }, [
+          _c("img", {
+            staticClass: "rounded-circle img-fluid",
+            attrs: { src: "/images/payment2.gif" }
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-purple btn-block btn-lg btn-rounded",
+              on: { click: _vm.openModal }
+            },
+            [_vm._v("Penjamin Baru")]
+          )
+        ])
+      ])
     ])
   ])
 }
@@ -1026,30 +1070,56 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 text-center" }, [
-      _c("h1", [_vm._v("PILIH PENJAMIN/CARA BAYAR PASIEN")])
+    return _c("div", { staticClass: "modal-dialog" }, [
+      _c("div", { staticClass: "modal-content" }, [
+        _c("div", { staticClass: "modal-header" }, [
+          _c("h5", { staticClass: "modal-title" }, [_vm._v("Penjamin Baru")]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "close",
+              attrs: {
+                type: "button",
+                "data-dismiss": "modal",
+                "aria-label": "Close"
+              }
+            },
+            [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-body" }, [
+          _vm._v("\n                Isi modal di sini\n            ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-footer" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-secondary",
+              attrs: { type: "button", "data-dismiss": "modal" }
+            },
+            [_vm._v("Tutup")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn btn-primary", attrs: { type: "button" } },
+            [_vm._v("Simpan Perubahan")]
+          )
+        ])
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-3" }, [
-      _c("div", { staticClass: "text-center" }, [
-        _c("img", {
-          staticClass: "rounded-circle img-fluid",
-          attrs: { src: "/images/payment2.gif" }
-        })
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-purple btn-block btn-lg btn-rounded",
-          attrs: { onclick: "penjamin_baru()" }
-        },
-        [_vm._v("Penjamin Baru")]
-      )
+    return _c("div", { staticClass: "col-12 text-center" }, [
+      _c("h1", { staticClass: "font-title" }, [
+        _vm._v("PILIH PENJAMIN/CARA BAYAR PASIEN")
+      ])
     ])
   }
 ]

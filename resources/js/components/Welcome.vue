@@ -1,3 +1,10 @@
+<style>
+.btn-rounded {
+    margin: 10px !important;
+    padding: 20px !important;
+    font-size: 30pt;
+}
+</style>
 <template>
     <div>
         <div class="col-12">
@@ -21,7 +28,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="form-group col-md-4">
-                            <router-link to="/registrasi-mandiri" class="btn btn-xl btn-secondary btn-rounded btn-block">
+                            <router-link to="apm/registrasi-mandiri" class="btn btn-xl btn-secondary btn-rounded btn-block">
                                 <i class="fas fa-address-card"></i> REGISTRASI MANDIRI
                             </router-link>
                         </div>

@@ -9,9 +9,12 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "darkaonline/l5-swagger": "^8.6",
         "fideloper/proxy": "^4.4",
+        "fidpro/builder": "dev-main",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "intervention/image": "^2.7",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5"
     },
@@ -37,8 +40,12 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
-        }
+            "Database\\Seeders\\": "database/seeders/",
+            "fidpro\\builder\\" : "vendor/fidpro/builder/src"
+        },
+        "files" : [
+            "app/Helpers/Global_helper.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

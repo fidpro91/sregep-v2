@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="col-12 text-center">
-            <h1>DATA DOKTER</h1>
+        <div class="col-12 text-center mb-3">
+            <h1 class="font-title">PILIH DOKTER PELAYANAN</h1>
         </div>
         <div v-if="dataDokter" class="row">
             <div v-for="(dokter,key) in dataDokter" :key="key" class="col-sm-4">

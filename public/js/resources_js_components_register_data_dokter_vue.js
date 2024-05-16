@@ -1001,8 +1001,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 text-center" }, [
-      _c("h1", [_vm._v("DATA DOKTER")])
+    return _c("div", { staticClass: "col-12 text-center mb-3" }, [
+      _c("h1", { staticClass: "font-title" }, [
+        _vm._v("PILIH DOKTER PELAYANAN")
+      ])
     ])
   },
   function() {

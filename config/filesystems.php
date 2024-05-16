@@ -42,6 +42,27 @@ return [
             'visibility' => 'public',
         ],
 
+        'klinik' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/klinik'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        
+        'photo-pegawai' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/photo-pegawai'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        'ttd-pegawai' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/ttd-pegawai'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

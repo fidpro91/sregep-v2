@@ -1,7 +1,28 @@
 <template>
     <div>
+        <div>
+            <div ref="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Penjamin Baru</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Isi modal di sini
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
         <div class="col-12 text-center">
-            <h1>PILIH PENJAMIN/CARA BAYAR PASIEN</h1>
+            <h1 class="font-title">PILIH PENJAMIN/CARA BAYAR PASIEN</h1>
         </div>
         <div class="row">
             <div class="col-md-9">
@@ -23,8 +44,8 @@
             <div class="col-md-3">
                 <div class="text-center">
                     <img class="rounded-circle img-fluid" src="/images/payment2.gif">
+                    <button @click="openModal" class="btn btn-purple btn-block btn-lg btn-rounded">Penjamin Baru</button>
                 </div>
-                <button class="btn btn-purple btn-block btn-lg btn-rounded" onclick="penjamin_baru()">Penjamin Baru</button>
             </div>
         </div>
     </div>
@@ -55,6 +76,9 @@ export default {
                 console.log(error)
                 this.caraBayar = []
             })
+        },
+        openModal() {
+            $(this.$refs.myModal).modal('show');
         },
         get_data_poli(id) {
             this.$setDataRegister({

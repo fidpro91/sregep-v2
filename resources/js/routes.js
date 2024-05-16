@@ -9,39 +9,39 @@ const finishRegistrasi = () => import('./components/register/finish_registrasi.v
 export const routes = [
     {
         name: 'home',
-        path: '/',
+        path: '/apm',
         component: Welcome
     },
     {
         name: 'registrasiMandiri',
-        path: '/registrasi-mandiri',
+        path: '/apm/registrasi-mandiri', // Menambahkan 'apm/' di depan path
         component: RegistrasiHome
     },
     {
         name: 'dataPatient',
-        path: '/data-patient',
+        path: '/apm/data-patient', // Menambahkan 'apm/' di depan path
         component: Patient
     },
     {
         name: 'dataPoli',
-        path: '/data-poli',
+        path: '/apm/data-poli', // Menambahkan 'apm/' di depan path
         component: Poli,
-        props : true
+        props: true
     },
     {
         name: 'jadwalDokter',
-        path: '/jadwal-dokter',
+        path: '/apm/jadwal-dokter', // Menambahkan 'apm/' di depan path
         component: jadwalDokter,
-        props : true
+        props: true
     },
     {
         name: 'caraBayar',
-        path: '/cara-bayar',
+        path: '/apm/cara-bayar', // Menambahkan 'apm/' di depan path
         component: caraBayar
     },
     {
         name: 'finishRegistrasi',
-        path: '/finish-registrasi',
+        path: '/apm/finish-registrasi', // Menambahkan 'apm/' di depan path
         component: finishRegistrasi
     }
-]
+];

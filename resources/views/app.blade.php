@@ -25,6 +25,12 @@
     <script src="{{asset('themes')}}/assets/libs/toastr/toastr.min.js"></script>
     <!-- Sweet Alerts js -->
     <script src="{{asset('themes')}}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- Slick JS -->    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <style>
         .navbar-custom {
             background-image: linear-gradient(to right, #07A51C , #EFF920) !important;
@@ -47,14 +53,22 @@
                 10px -10px 1px rgba(9, 10, 2, 0.5),
                 0px 0px 9px rgba(9, 10, 2, .2);
         }
-        .btn-rounded {
-            margin: 10px !important;
-            padding: 20px !important;
-            font-size: 30pt;
-        }
         .no-identitas,.search-poli {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 50px !important;
+        }
+        .btn-action {
+            margin: 5px !important;
+            /* padding: 20px !important; */
+            font-size: 20pt;
+        }
+        .font-title {
+            font-size: 30pt;
+            font-family: 'oswald', sans-serif;
+        }
+        .info-patient {
+            font-size: 30pt;
+            font-family: 'Roboto',sans-serif;
         }
     </style>
 </head>
@@ -63,5 +77,4 @@
     </div>
     <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
 </body>
-
 </html>

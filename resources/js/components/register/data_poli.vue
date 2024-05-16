@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="card-header">
-            <H1>PILIH POLI TUJUAN</H1>
+            <H1 class="font-title">PILIH POLI TUJUAN</H1>
             <input type="text" name="filter_poli" @keyup="getDataPoli" class="form-control input-lg search-poli text-center" placeholder="Ketikkan nama poli tujuan berobat" v-model="searchPoli">
         </div>
         <div class="card-body">
@@ -56,16 +56,21 @@
                 this.$setDataRegister({
                     'poli' : id
                 });
+                const dataPatient = JSON.parse(localStorage.getItem("patientData"));
                 this.axios.get('/api/get_jadwal_dokter/',{
                     params : {
-                        "unit_id" : id
+                        "unit_id" : id,
+                        "px_id" : dataPatient.px_id
                     }
                 }).then(response=>{
-                    const dataDokter = response.data;
+                    if (response.data.code != 200) {
+                        return Promise.reject(response.data.message);
+                    }
+                    const dataDokter = response.data.data;
                     this.$router.push({ name: "jadwalDokter", params: { dataDokter } });
                 }).catch(error=>{
-                    console.log(error)
-                    this.dataPoli = []
+                    Swal.fire("Oopss...!!",error, "error");
+                    // this.dataPoli = []
                 })
             }
         }

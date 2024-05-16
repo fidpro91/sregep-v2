@@ -1,0 +1,51 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "SREGEP API",
+        "description": "API registrasi sregep",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/example": {
+            "get": {
+                "tags": [
+                    "Example"
+                ],
+                "summary": "Get a list of examples",
+                "operationId": "926243145e2eedd94e1c3714c36f81ba",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "description": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Users",
+            "description": "API for managing users"
+        }
+    ]
+}

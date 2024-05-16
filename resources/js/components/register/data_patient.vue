@@ -8,7 +8,7 @@
     <div>
         <div v-if="patientData" class="card">
             <div class="card-header text-center">
-                <h1>INFORMASI BIODATA PASIEN</h1>
+                <h1 class="font-title">INFORMASI BIODATA PASIEN</h1>
             </div>
             <div class="card-body info-patient">
                 <div class="row">
@@ -25,10 +25,20 @@
             </div>
             <div class="card-footer bg-dark">
                 <div class="float-right">
-                    <router-link to="/cara-bayar" class="btn btn-primary btn-lg">Register</router-link>
+                    <router-link to="/apm/cara-bayar" class="btn btn-primary btn-lg btn-action">
+                        <i class="fas fa-fast-forward"></i>
+                        Lanjut
+                    </router-link>
                 </div>
                 <div class="float-left">
-                    <router-link to="/registrasi-mandiri" class="btn btn-danger btn-lg">Kembali</router-link>
+                    <router-link to="apm/registrasi-mandiri" class="btn btn-danger btn-lg btn-action">
+                        <i class="fas fa-fast-backward"></i>
+                        Kembali
+                    </router-link>
+                    <router-link to="/apm" class="btn btn-success btn-lg btn-action">
+                        <i class="fas fa-home"></i>
+                        Beranda
+                    </router-link>
                 </div>
             </div>
         </div>
